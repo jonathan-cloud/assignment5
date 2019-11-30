@@ -78,10 +78,11 @@
 }
 
 body {
-  height: 100vh;
+  height: 80vh;
   background-image: url("/images/background.jpg");
   /* background-repeat: no-repeat; */
   background-size: 210vh;
+  margin: 20px;
 }
 
 .memory-game {
