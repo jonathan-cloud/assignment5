@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div id='start' class="container-fluid start-menu">
+    <h1>Memory Game <br>Click New Game to Start</h1><br>
+    <h2>Pick a Level</h2>
+
+    <label> <input type="radio" id="easy" name="difficulty" value="12"> Easy</label>
+    <label><input type="radio" id="med" name="difficulty" value="18"> Medium
+    </label>
+    <label><input type="radio" id="hard" name="difficulty" value="24"> Hard
+    </label>
+
+  </div>
+
+  <div id='pop-up' class='navbar'>
+    <div class=overlay-text id=overlay><br>You won!!!<br>
+      You got <span id="wrong"></span> wrong.<br>
+      Play again?
+
+    </div>
+
+    <button class="button5" id="newGame">New Game</button>
+    <button class='button5' id="return" style="display:none;">Back to Start</button>
+    <div id="score-box">
+
+
+    </div>
+
+  </div>
+  <div id="cards" class="memory-game">
+
+  </div>
+
+  <script src="script/scrip.js"></script>
+</body>
+
+</html>

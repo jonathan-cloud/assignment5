@@ -1,0 +1,134 @@
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: blue;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+.button5 {
+  display: inline-block;
+  position: relative;
+  padding: 0.46em 1.6em;
+  border: 0.1em solid aqua;
+  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: black;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: aqua;
+  text-align: center;
+  transition: all 0.15s;
+  margin-top: 20px;
+  z-index: 1000;
+}
+
+.button5:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+/* @media all and (max-width:30em) {
+  .button5 {
+    display: block;
+    margin: 0.4em auto;
+  }
+} */
+
+.navbar {
+  text-align: center;
+  font-size: 20px;
+}
+
+.start-menu {
+  border: 1px solid black;
+  /* display: flex;
+  flex-direction: column; */
+  text-align: center;
+  margin: 100px;
+  font-size: 30px;
+  background-color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url("/images/background.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: 210vh;
+}
+
+.memory-game {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  perspective: 1000px;
+  display: none;
+}
+
+.memory-card {
+  width: calc(16.667% - 10px);
+  height: calc(33.333% - 10px);
+  position: relative;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+
+}
+
+.memory-card:active {
+  transform: scale(.97);
+  transition: transfrom .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 100%;
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  /* padding: 20px; */
+  border-radius: 5px;
+  border: 2px solid black;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
